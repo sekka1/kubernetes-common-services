@@ -1,0 +1,24 @@
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1alpha1
+kind: Kustomization
+metadata:
+  creationTimestamp: null
+  name: webapp-frontend
+  namespace: gitops-system
+spec:
+  dependsOn:
+  - webapp-backend
+  healthChecks:
+  - kind: Deployment
+    name: frontend
+    namespace: webapp
+  interval: 10m0s
+  path: ./deploy/webapp/frontend
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: webapp
+  timeout: 2m0s
+  validation: client
+status: {}
+

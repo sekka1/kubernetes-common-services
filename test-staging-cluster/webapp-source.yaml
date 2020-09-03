@@ -1,0 +1,14 @@
+---
+apiVersion: source.toolkit.fluxcd.io/v1alpha1
+kind: GitRepository
+metadata:
+  creationTimestamp: null
+  name: webapp
+  namespace: gitops-system
+spec:
+  interval: 30s
+  ref:
+    branch: master
+  url: https://github.com/stefanprodan/podinfo
+status: {}
+
