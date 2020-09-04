@@ -1,0 +1,13 @@
+---
+apiVersion: source.toolkit.fluxcd.io/v1alpha1
+kind: GitRepository
+metadata:
+  creationTimestamp: null
+  name: kubernetes-charts
+  namespace: gitops-system
+spec:
+  interval: 30s
+  ref:
+    branch: master
+  url: https://kubernetes-charts.storage.googleapis.com
+status: {}
