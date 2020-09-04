@@ -4,7 +4,7 @@ kind: GitRepository
 metadata:
   creationTimestamp: null
   name: kubernetes-common-services
-  namespace: gitops-system
+  namespace: gitops-system2
 spec:
   interval: 30s
   ref:
